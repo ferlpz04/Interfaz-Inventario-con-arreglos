@@ -13,12 +13,7 @@ btnAdd.addEventListener("click", () => {
   let nuevo = new Producto(codigo, nombre, cantidad, precio);
   inv.agregar(nuevo);
 
-  divDetalles.innerHTML += `
-    <div>
-      <h3>Se agregó</h3>
-      <p>${nuevo.info()}</p>
-    </div>
-  `;
+  divDetalles.innerHTML += "<div><h3>Se agregó</h3>" + nuevo.infoHtml() + "</div>";
 });
 
 btnListar.addEventListener("click", () => {
